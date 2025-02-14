@@ -1,0 +1,12 @@
+[Unit]
+Description=bash_over_ros
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=simple
+User=REPLACEME
+ExecStart=/bin/bash /services/rosbash.sh
+
+[Install]
+WantedBy=multi-user.target
